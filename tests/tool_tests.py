@@ -16,9 +16,11 @@ from nose.tools import ok_
 from oemof.tools import economics
 from oemof.tools import logger
 from oemof.tools.logger import extend_basic_path
+from oemof.tools.logger import get_basic_path
 
 
 def test_helpers():
+    get_basic_path()
     ok_(os.path.isdir(os.path.join(os.path.expanduser('~'), '.oemof')))
     new_dir = extend_basic_path('test_xf67456_dir')
     ok_(os.path.isdir(new_dir))
