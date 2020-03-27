@@ -10,9 +10,6 @@ matrix:
     - python: '3.6'
       env:
         - TOXENV=check
-    - python: '3.6'
-      env:
-        - TOXENV=docs
     - env:
         - TOXENV=py36-cover,codecov,coveralls
       python: '3.6'
@@ -39,6 +36,11 @@ matrix:
     - env:
         - TOXENV=py38-nocov
       python: '3.8'
+  allow_failures:
+    -   python: '3.6'
+      env:
+        - TOXENV=docs
+
 before_install:
   - python --version
   - uname -a
