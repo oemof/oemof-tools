@@ -22,7 +22,7 @@ class SuspiciousUsageWarning(UserWarning):
 
     Note
     ----
-
+    TODO: Fix ref!
     See :ref:`oemof_tools_debugging_suspicioususagewarningsolph_label` for more
     information.
 
