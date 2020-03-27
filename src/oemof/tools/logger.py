@@ -157,6 +157,7 @@ def get_basic_path():
         os.mkdir(basicpath)
     return basicpath
 
+# Todo: The unbundled version does not have the same commit or version. FIX!
 
 # def get_version():
 #     """Returns a string part of the used version. If the commit and the
