@@ -24,7 +24,7 @@ def read(*names, **kwargs):
 
 
 setup(
-    name="oemof-tools",
+    name="oemof.tools",
     version="0.4.0.dev0",
     license="MIT",
     description="Tiny tools of the oemof project.",
