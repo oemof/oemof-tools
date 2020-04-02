@@ -13,9 +13,10 @@ import os
 import warnings
 
 from nose.tools import assert_raises_regexp
-from nose.tools import ok_, eq_
-from oemof.tools import economics
+from nose.tools import eq_
+from nose.tools import ok_
 from oemof.tools import debugging
+from oemof.tools import economics
 from oemof.tools.logger import define_logging
 from oemof.tools.logger import extend_basic_path
 from oemof.tools.logger import get_basic_path
