@@ -40,29 +40,29 @@ Overview
     :alt: Coverage Status
     :target: https://codecov.io/github/oemof/oemof-tools
 
-.. |codacy| image:: https://img.shields.io/codacy/grade/CODACYTOKEN.svg
-    :target: https://www.codacy.com/app/oemof/oemof-tools
-    :alt: Codacy Code Quality Status
+.. |codacy| image:: https://api.codacy.com/project/badge/Grade/d3f596a266514292a0e106a1298ae76c
+   :alt: Codacy Badge
+   :target: https://app.codacy.com/gh/oemof/oemof-tools?utm_source=github.com&utm_medium=referral&utm_content=oemof/oemof-tools&utm_campaign=Badge_Grade_Dashboard
 
 .. |codeclimate| image:: https://codeclimate.com/github/oemof/oemof-tools/badges/gpa.svg
    :target: https://codeclimate.com/github/oemof/oemof-tools
    :alt: CodeClimate Quality Status
 
-.. |version| image:: https://img.shields.io/pypi/v/oemof-tools.svg
+.. |version| image:: https://img.shields.io/pypi/v/oemof.svg
     :alt: PyPI Package latest release
-    :target: https://pypi.org/project/oemof-tools
+    :target: https://pypi.org/project/oemof
 
-.. |wheel| image:: https://img.shields.io/pypi/wheel/oemof-tools.svg
+.. |wheel| image:: https://img.shields.io/pypi/wheel/oemof.svg
     :alt: PyPI Wheel
-    :target: https://pypi.org/project/oemof-tools
+    :target: https://pypi.org/project/oemof
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/oemof-tools.svg
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/oemof.svg
     :alt: Supported versions
-    :target: https://pypi.org/project/oemof-tools
+    :target: https://pypi.org/project/oemof
 
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/oemof-tools.svg
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/oemof.svg
     :alt: Supported implementations
-    :target: https://pypi.org/project/oemof-tools
+    :target: https://pypi.org/project/oemof
 
 .. |commits-since| image:: https://img.shields.io/github/commits-since/oemof/oemof-tools/v0.4.0.dev0.svg
     :alt: Commits since latest release
