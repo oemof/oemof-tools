@@ -123,3 +123,8 @@ Note, to combine the coverage data from all the tox environments run:
 
             PYTEST_ADDOPTS=--cov-append tox
 
+
+
+.. image:: https://api.codacy.com/project/badge/Grade/d3f596a266514292a0e106a1298ae76c
+   :alt: Codacy Badge
+   :target: https://app.codacy.com/gh/oemof/oemof-tools?utm_source=github.com&utm_medium=referral&utm_content=oemof/oemof-tools&utm_campaign=Badge_Grade_Dashboard
