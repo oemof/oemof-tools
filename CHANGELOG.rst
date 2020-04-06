@@ -2,7 +2,7 @@
 Changelog
 =========
 
-0.4.0.rc.0 (2020-04-04)
+0.4.0.rc.1 (2020-04-04)
 -----------------------
 
 * Move the code of the oemof.tools repository to a stand-alone repository.
