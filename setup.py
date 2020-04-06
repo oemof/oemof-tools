@@ -23,18 +23,24 @@ def read(*names, **kwargs):
         return fh.read()
 
 
+long_description = (
+        "%s\n%s"
+        % (
+            re.compile("^.. start-badges.*^.. end-badges", re.M | re.S).sub(
+                "", read("README.rst")
+            ),
+            re.sub(":[a-z]+:`~?(.*?)`", r"``\1``", read("CHANGELOG.rst")),
+        )
+    )
+
+
 setup(
     name="oemof.tools",
     version="0.4.0.rc.1",
     license="MIT",
     description="Tiny tools of the oemof project.",
-    long_description="%s\n%s"
-    % (
-        re.compile("^.. start-badges.*^.. end-badges", re.M | re.S).sub(
-            "", read("README.rst")
-        ),
-        re.sub(":[a-z]+:`~?(.*?)`", r"``\1``", read("CHANGELOG.rst")),
-    ),
+    long_description_content_type="text/x-rst",
+    long_description=long_description,
     author="oemof-developer-group",
     author_email="contact@oemof.org",
     url="https://github.com/oemof/oemof-tools",
@@ -67,7 +73,8 @@ setup(
     project_urls={
         "Documentation": "https://oemof-tools.readthedocs.io/",
         "Changelog": (
-            "https://oemof-tools.readthedocs.io/en/latest/changelog.html"),
+            "https://oemof-tools.readthedocs.io/en/latest/changelog.html"
+        ),
         "Issue Tracker": "https://github.com/oemof/oemof-tools/issues",
     },
     keywords=[
