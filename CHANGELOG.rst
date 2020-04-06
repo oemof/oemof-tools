@@ -2,7 +2,9 @@
 Changelog
 =========
 
-0.4.0.dev0 (2020-04-04)
+0.4.0.rc.0 (2020-04-04)
 -----------------------
 
-* First release on PyPI.
+* Move the code of the oemof.tools repository to a stand-alone repository.
+* Use cookiecutter to create a wider testing structure and a more standardised
+  package structure.
