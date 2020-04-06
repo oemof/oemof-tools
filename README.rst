@@ -11,12 +11,13 @@ Documentation
   |docs|
 
 Tests
-   |travis| |appveyor| |requires| |coveralls| |codecov|
-   |scrutinizer| |codacy| |codeclimate|
+   | |travis| |appveyor| |requires|
+   | |coveralls| |codecov|
+   | |scrutinizer| |codacy| |codeclimate|
 
 Package
-   |version| |wheel| |supported-versions| |supported-implementations|
-   |commits-since|
+   | |version| |wheel| |supported-versions|
+   | |supported-implementations| |commits-since|
 
 .. |docs| image:: https://readthedocs.org/projects/oemof-tools/badge/?style=flat
     :target: https://readthedocs.org/projects/oemof-tools
