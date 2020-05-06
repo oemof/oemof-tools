@@ -4,9 +4,6 @@ Overview
 
 .. start-badges
 
-.. list-table::
-    :stub-columns: 1
-
 Documentation
   |docs|
 

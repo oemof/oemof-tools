@@ -23,8 +23,8 @@ from logging import info
 
 def define_logging(logpath=None, logfile='oemof.log', file_format=None,
                    screen_format=None, file_datefmt=None, screen_datefmt=None,
-                   screen_level=INFO, file_level=DEBUG,
-                   log_version=True, log_path=True, timed_rotating=None):
+                   screen_level=INFO, file_level=DEBUG, log_path=True,
+                   timed_rotating=None):
 
     r"""Initialise customisable logger.
 
@@ -49,9 +49,6 @@ def define_logging(logpath=None, logfile='oemof.log', file_format=None,
         Level of logging to stdout. Default: 20 (logging.INFO)
     file_level : int
         Level of logging to file. Default: 10 (logging.DEBUG)
-    log_version : boolean
-        If True the actual version or commit is logged while initialising the
-        logger.
     log_path : boolean
         If True the used file path is logged while initialising the logger.
     timed_rotating : dict
@@ -79,7 +76,7 @@ def define_logging(logpath=None, logfile='oemof.log', file_format=None,
     >>> import logging
     >>> from oemof.tools import logger
     >>> mypath = logger.define_logging(
-    ...     log_path=True, log_version=True, timed_rotating={'backupCount': 4},
+    ...     log_path=True, timed_rotating={'backupCount': 4},
     ...     screen_level=logging.ERROR, screen_datefmt = "no_date")
     >>> mypath[-9:]
     'oemof.log'
@@ -131,10 +128,6 @@ def define_logging(logpath=None, logfile='oemof.log', file_format=None,
     fh.setFormatter(file_formatter)
     if log_path:
         info("Path for logging: {0}".format(file))
-
-    if log_version:
-        pass
-        # info("Used oemof version: {0}".format(get_version()))
     return file
 
 
@@ -156,71 +149,3 @@ def get_basic_path():
     if not os.path.isdir(basicpath):
         os.mkdir(basicpath)
     return basicpath
-
-# Todo: The unbundled version does not have the same commit or version. FIX!
-
-# def get_version():
-#     """Returns a string part of the used version. If the commit and the
-#     branch is available the commit and the branch will be returned otherwise
-#     the version number.
-#
-#     >>> from oemof.tools import logger
-#     >>> v = logger.get_version()
-#     >>> type(v)
-#     <class 'str'>
-#     """
-#     try:
-#         return check_git_branch()
-#     except FileNotFoundError:
-#         return "{0}".format(check_version())
-#
-
-# def check_version():
-#     """Returns the actual version number of the used oemof version.
-#
-#     >>> from oemof.tools import logger
-#     >>> v = logger.check_version()
-#     >>> int(v.split('.')[0])
-#     0
-#     """
-#     try:
-#         version = oemof.__version__
-#     except AttributeError:
-#         version = 'No version found due to internal error.'
-#     return version
-#
-#
-# def check_git_branch():
-#     """Passes the used branch and commit to the logger
-#
-#     The following test reacts on a local system different than on Travis-CI.
-#     Therefore, a try/except test is created.
-#
-#     >>> from oemof.tools import logger
-#     >>> try:
-#     ...    v = logger.check_git_branch()
-#     ... except FileNotFoundError:
-#     ...    v = 'dsfafasdfsdf'
-#     >>> type(v)
-#     <class 'str'>
-#     """
-#
-#     path = os.path.join(os.path.dirname(
-#         os.path.realpath(__file__)), os.pardir,
-#         os.pardir, '.git')
-#
-#     # Reads the name of the branch
-#     f_branch = os.path.join(path, 'HEAD')
-#     f = open(f_branch, "r")
-#     first_line = f.readlines(1)
-#     name_full = first_line[0].replace("\n", "")
-#     name_branch = name_full.replace("ref: refs/heads/", "")
-#     f.close()
-#
-#     # Reads the code of the last commit used
-#     f_commit = os.path.join(path, 'refs', 'heads', name_branch)
-#     f = open(f_commit, "r")
-#     last_commit = f.read(8)
-#     f.close()
-#
-#     return "{0}@{1}".format(last_commit, name_branch)
