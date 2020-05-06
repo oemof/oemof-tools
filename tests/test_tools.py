@@ -32,6 +32,35 @@ def test_helpers():
     assert not os.path.isdir(new_dir)
 
 
+def test_define_logging_format():
+    file_format = "%(module)s - %(message)s"
+    screen_format = "%(levelname)s-%(message)s"
+    my_logpath = extend_basic_path('test_xf4hz4345456_dir')
+    my_logfile = define_logging(
+        logpath=my_logpath, log_path=False, screen_format=screen_format,
+        file_format=file_format
+    )
+    logging.info("basdfuio")
+    f = open(my_logfile, "r")
+    log_content = f.read()
+    assert "test_tools - basdfuio" in log_content
+    assert "DEBUG" not in log_content
+    os.remove(my_logfile)
+    os.rmdir(my_logpath)
+
+
+def test_logg_file_in_new_path():
+    my_logpath = extend_basic_path('test_xf4hz4u67456_dir')
+    my_logfile = define_logging(logpath=my_logpath)
+    assert os.path.join(my_logpath, "oemof.log") == my_logfile
+    assert os.path.isfile(my_logfile)
+    logging.debug("Tester345")
+    f = open(my_logfile, "r")
+    log_content = f.read()
+    assert "Tester345" in log_content
+    assert "DEBUG" in log_content
+    os.remove(my_logfile)
+    os.rmdir(my_logpath)
 
 
 def test_logger():
