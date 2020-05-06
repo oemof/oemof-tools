@@ -85,11 +85,11 @@ Installation
 
 ::
 
-    pip install oemof-tools
+    pip install oemof.tools
 
 You can also install the in-development version with::
 
-    pip install https://github.com/oemof/oemof-tools/archive/master.zip
+    pip install https://github.com/oemof/oemof-tools/archive/dev.zip
 
 
 Documentation
