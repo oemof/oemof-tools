@@ -37,13 +37,13 @@ environment:
       PYTHON_HOME: C:\Python38-x64
       PYTHON_VERSION: '3.8'
       PYTHON_ARCH: '64'
-    - TOXENV: py38-nocov
+    - TOXENV: py3-nocov
       TOXPYTHON: C:\Python38\python.exe
       PYTHON_HOME: C:\Python38
       PYTHON_VERSION: '3.8'
       PYTHON_ARCH: '32'
       WHEEL_PATH: .tox/dist
-    - TOXENV: py38-nocov
+    - TOXENV: py3-nocov
       TOXPYTHON: C:\Python38-x64\python.exe
       PYTHON_HOME: C:\Python38-x64
       PYTHON_VERSION: '3.8'
