@@ -34,7 +34,7 @@ If you are an advanced user with your own ideas it might be easier to copy the w
     define_logging(logpath=None, logfile='oemof.log', file_format=None,
                    screen_format=None, file_datefmt=None, screen_datefmt=None,
                    screen_level=logging.INFO, file_level=logging.DEBUG,
-                   log_version=True, log_path=True, timed_rotating=None):
+                   log_path=True, timed_rotating=None):
 
 By default down to INFO all messages are written on the screen and down to DEBUG all messages are written in the file. The file is placed in $HOME/.oemof/log_files as oemof.log. But you can easily pass your own path and your own filename. You can also change the logging level (screen/file) by changing the screen_level or the file_level to logging.DEBUG, logging.INFO, logging.WARNING.... . You can stop the logger from logging the oemof version or commit with *log_version=False* and the path of the file with *log_path=False*. Furthermore, you can change the format on the screen and in the file according to the python logging documentation. You can also change the used time format according to this documentation.
 
