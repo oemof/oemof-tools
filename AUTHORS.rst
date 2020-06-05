@@ -2,4 +2,9 @@
 Authors
 =======
 
-* oemof-developer-group - https://oemof.org
+* Caroline Möller
+* Guido Plessmann
+* Hendrik Hyskens
+* Simon Hilpert
+* Stephan Günther
+* Uwe Krien

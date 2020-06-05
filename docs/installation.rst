@@ -4,4 +4,4 @@ Installation
 
 At the command line::
 
-    pip install oemof-tools
+    pip install oemof.tools

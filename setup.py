@@ -36,7 +36,7 @@ long_description = (
 
 setup(
     name="oemof.tools",
-    version="0.4.0.rc.1",
+    version="0.4.0",
     license="MIT",
     description="Tiny tools of the oemof project.",
     long_description_content_type="text/x-rst",
@@ -84,9 +84,5 @@ setup(
     install_requires=[
         # eg: 'aspectlib==1.1.1', 'six>=1.7',
     ],
-    extras_require={
-        # eg:
-        #   'rst': ['docutils>=0.11'],
-        #   ':python_version=="2.6"': ['argparse'],
-    },
+    extras_require={"dev": ["pytest", "sphinx", "sphinx_rtd_theme", ]},
 )

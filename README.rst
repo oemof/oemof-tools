@@ -4,18 +4,18 @@ Overview
 
 .. start-badges
 
-.. list-table::
-    :stub-columns: 1
+Documentation
+  |docs|
 
-    * - docs
-      - |docs|
-    * - tests
-      - | |travis| |appveyor| |requires|
-        | |coveralls| |codecov|
-        | |scrutinizer| |codacy| |codeclimate|
-    * - package
-      - | |version| |wheel| |supported-versions| |supported-implementations|
-        | |commits-since|
+Tests
+   | |travis| |appveyor| |requires|
+   | |coveralls| |codecov|
+   | |scrutinizer| |codacy| |codeclimate|
+
+Package
+   | |version| |wheel| |supported-versions|
+   | |supported-implementations| |commits-since|
+
 .. |docs| image:: https://readthedocs.org/projects/oemof-tools/badge/?style=flat
     :target: https://readthedocs.org/projects/oemof-tools
     :alt: Documentation Status
@@ -48,25 +48,25 @@ Overview
    :target: https://codeclimate.com/github/oemof/oemof-tools
    :alt: CodeClimate Quality Status
 
-.. |version| image:: https://img.shields.io/pypi/v/oemof.svg
+.. |version| image:: https://img.shields.io/pypi/v/oemof.tools.svg
     :alt: PyPI Package latest release
-    :target: https://pypi.org/project/oemof
+    :target: https://pypi.org/project/oemof.tools
 
-.. |wheel| image:: https://img.shields.io/pypi/wheel/oemof.svg
+.. |wheel| image:: https://img.shields.io/pypi/wheel/oemof.tools.svg
     :alt: PyPI Wheel
-    :target: https://pypi.org/project/oemof
+    :target: https://pypi.org/project/oemof.tools
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/oemof.svg
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/oemof.tools.svg
     :alt: Supported versions
-    :target: https://pypi.org/project/oemof
+    :target: https://pypi.org/project/oemof.tools
 
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/oemof.svg
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/oemof.tools.svg
     :alt: Supported implementations
-    :target: https://pypi.org/project/oemof
+    :target: https://pypi.org/project/oemof.tools
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/oemof/oemof-tools/v0.4.0.dev0.svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/oemof/oemof-tools/v0.4.0.svg
     :alt: Commits since latest release
-    :target: https://github.com/oemof/oemof-tools/compare/v0.4.0.dev0...master
+    :target: https://github.com/oemof/oemof-tools/compare/v0.4.0..master
 
 
 .. |scrutinizer| image:: https://img.shields.io/scrutinizer/quality/g/oemof/oemof-tools/master.svg
@@ -85,11 +85,11 @@ Installation
 
 ::
 
-    pip install oemof-tools
+    pip install oemof.tools
 
 You can also install the in-development version with::
 
-    pip install https://github.com/oemof/oemof-tools/archive/master.zip
+    pip install https://github.com/oemof/oemof-tools/archive/dev.zip
 
 
 Documentation
