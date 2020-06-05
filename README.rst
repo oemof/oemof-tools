@@ -64,9 +64,9 @@ Package
     :alt: Supported implementations
     :target: https://pypi.org/project/oemof.tools
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/oemof/oemof-tools/v0.4.0.svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/oemof/oemof-tools/v0.4.0/dev
     :alt: Commits since latest release
-    :target: https://github.com/oemof/oemof-tools/compare/v0.4.0..master
+    :target: https://github.com/oemof/oemof-tools/compare/v0.4.0..dev
 
 
 .. |scrutinizer| image:: https://img.shields.io/scrutinizer/quality/g/oemof/oemof-tools/master.svg
