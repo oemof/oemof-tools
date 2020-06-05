@@ -36,7 +36,7 @@ long_description = (
 
 setup(
     name="oemof.tools",
-    version="0.4.0.rc.2",
+    version="0.4.0",
     license="MIT",
     description="Tiny tools of the oemof project.",
     long_description_content_type="text/x-rst",
