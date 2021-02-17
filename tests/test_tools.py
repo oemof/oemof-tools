@@ -14,6 +14,7 @@ import os
 import warnings
 
 import pytest
+
 from oemof.tools import debugging
 from oemof.tools import economics
 from oemof.tools.logger import define_logging
