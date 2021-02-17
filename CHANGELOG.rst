@@ -2,6 +2,12 @@
 Changelog
 =========
 
+0.4.1 (2021-02-21)
+------------------
+
+* Fix compatibility problem (by naming submodules in init script)
+
+
 0.4.0 (2020-05-11)
 ------------------
 
