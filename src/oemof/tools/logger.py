@@ -86,6 +86,7 @@ def define_logging(logpath=None, logfile='oemof.log', file_format=None,
     if logpath is None:
         logpath = extend_basic_path('log_files')
 
+    # Fetch minimal logging level
     if screen_level > file_level:
         min_level = file_level
     else:
