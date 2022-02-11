@@ -78,7 +78,9 @@ def test_annuity():
     """Test annuity function of economics tool."""
     assert round(economics.annuity(1000, 10, 0.1)) == 163
     assert round(economics.annuity(capex=1000, wacc=0.1, n=10, u=5)) == 264
-    assert round(economics.annuity(1000, 10, 0.1, u=5, cost_decrease=0.1)) == 222
+    assert (
+        round(economics.annuity(1000, 10, 0.1, u=5, cost_decrease=0.1)) == 222
+    )
 
 
 def test_annuity_exceptions():
@@ -86,7 +88,9 @@ def test_annuity_exceptions():
     pytest.raises(ValueError, economics.annuity, 1000, 10, 2)
     pytest.raises(ValueError, economics.annuity, 1000, 0.5, 1)
     pytest.raises(ValueError, economics.annuity, 1000, 10, 0.1, u=0.3)
-    pytest.raises(ValueError, economics.annuity, 1000, 10, 0.1, cost_decrease=-1)
+    pytest.raises(
+        ValueError, economics.annuity, 1000, 10, 0.1, cost_decrease=-1
+    )
 
 
 def test_suspicious_usage_warning():

@@ -69,7 +69,9 @@ setup(
     ],
     project_urls={
         "Documentation": "https://oemof-tools.readthedocs.io/",
-        "Changelog": ("https://oemof-tools.readthedocs.io/en/latest/changelog.html"),
+        "Changelog": (
+            "https://oemof-tools.readthedocs.io/en/latest/changelog.html"
+        ),
         "Issue Tracker": "https://github.com/oemof/oemof-tools/issues",
     },
     keywords=[
