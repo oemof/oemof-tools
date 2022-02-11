@@ -85,7 +85,7 @@ def define_logging(
     >>> from oemof.tools import logger
     >>> mypath = logger.define_logging(
     ...     log_path=True, timed_rotating={'backupCount': 4},
-    ...     screen_level=logging.DEBUG, screen_datefmt = "no_date")
+    ...     screen_level=logging.ERROR, screen_datefmt = "no_date")
     >>> mypath[-9:]
     'oemof.log'
     >>> logging.debug("Hallo")
@@ -107,7 +107,7 @@ def define_logging(
     # Remove existing handlers to avoid interference.
     log.handlers = []
     log.setLevel(min_level)
-    print(min_level)
+
     if file_format is None:
         file_format = "%(asctime)s - %(levelname)s - %(module)s - %(message)s"
     file_formatter = Formatter(file_format, file_datefmt)
