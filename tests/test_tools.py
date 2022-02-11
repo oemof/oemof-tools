@@ -39,7 +39,7 @@ def test_define_logging_format():
     my_logpath = extend_basic_path('test_xf4hz4345456_dir')
     my_logfile = define_logging(
         logpath=my_logpath, log_path=False, screen_format=screen_format,
-        file_format=file_format
+        file_format=file_format, file_level=logging.INFO
     )
     logging.info("basdfuio")
     f = open(my_logfile, "r")
@@ -52,7 +52,7 @@ def test_define_logging_format():
 
 def test_logg_file_in_new_path():
     my_logpath = extend_basic_path('test_xf4hz4u67456_dir')
-    my_logfile = define_logging(logpath=my_logpath)
+    my_logfile = define_logging(logpath=my_logpath, file_level=logging.DEBUG)
     assert os.path.join(my_logpath, "oemof.log") == my_logfile
     assert os.path.isfile(my_logfile)
     logging.debug("Tester345")
