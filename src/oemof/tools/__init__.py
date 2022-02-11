@@ -1,4 +1,4 @@
-__version__ = '0.4.2dev0'
+__version__ = "0.4.2dev0"
 
 from . import debugging  # noqa: F401
 from . import economics  # noqa: F401

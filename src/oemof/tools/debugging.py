@@ -31,4 +31,5 @@ class SuspiciousUsageWarning(UserWarning):
     >>> import warnings
     >>> warnings.filterwarnings("ignore", category=SuspiciousUsageWarning)
     """
+
     pass
