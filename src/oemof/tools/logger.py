@@ -11,8 +11,8 @@ SPDX-License-Identifier: MIT
 
 import os
 import sys
-from logging import DEBUG
 from logging import INFO
+from logging import WARNING
 from logging import Formatter
 from logging import StreamHandler
 from logging import debug
@@ -23,7 +23,7 @@ from logging import info
 
 def define_logging(logpath=None, logfile='oemof.log', file_format=None,
                    screen_format=None, file_datefmt=None, screen_datefmt=None,
-                   screen_level=INFO, file_level=DEBUG, log_path=True,
+                   screen_level=INFO, file_level=WARNING, log_path=True,
                    timed_rotating=None):
 
     r"""Initialise customisable logger.
@@ -86,13 +86,18 @@ def define_logging(logpath=None, logfile='oemof.log', file_format=None,
     if logpath is None:
         logpath = extend_basic_path('log_files')
 
+    if screen_level > file_level:
+        min_level = file_level
+    else:
+        min_level = screen_level
+
     file = os.path.join(logpath, logfile)
 
     log = getLogger('')
 
     # Remove existing handlers to avoid interference.
     log.handlers = []
-    log.setLevel(DEBUG)
+    log.setLevel(min_level)
 
     if file_format is None:
         file_format = (
