@@ -23,15 +23,12 @@ def read(*names, **kwargs):
         return fh.read()
 
 
-long_description = (
-        "%s\n%s"
-        % (
-            re.compile("^.. start-badges.*^.. end-badges", re.M | re.S).sub(
-                "", read("README.rst")
-            ),
-            re.sub(":[a-z]+:`~?(.*?)`", r"``\1``", read("CHANGELOG.rst")),
-        )
-    )
+long_description = "%s\n%s" % (
+    re.compile("^.. start-badges.*^.. end-badges", re.M | re.S).sub(
+        "", read("README.rst")
+    ),
+    re.sub(":[a-z]+:`~?(.*?)`", r"``\1``", read("CHANGELOG.rst")),
+)
 
 
 setup(
@@ -72,9 +69,7 @@ setup(
     ],
     project_urls={
         "Documentation": "https://oemof-tools.readthedocs.io/",
-        "Changelog": (
-            "https://oemof-tools.readthedocs.io/en/latest/changelog.html"
-        ),
+        "Changelog": ("https://oemof-tools.readthedocs.io/en/latest/changelog.html"),
         "Issue Tracker": "https://github.com/oemof/oemof-tools/issues",
     },
     keywords=[
@@ -84,5 +79,11 @@ setup(
     install_requires=[
         # eg: 'aspectlib==1.1.1', 'six>=1.7',
     ],
-    extras_require={"dev": ["pytest", "sphinx", "sphinx_rtd_theme", ]},
+    extras_require={
+        "dev": [
+            "pytest",
+            "sphinx",
+            "sphinx_rtd_theme",
+        ]
+    },
 )
