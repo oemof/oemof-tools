@@ -2,6 +2,14 @@
 Changelog
 =========
 
+0.4.2 (2022-06-15)
+------------------
+
+* Add Python support for Python 3.10 and drop support for 3.7
+* Move CI from Appveyor and Travis to Github Actions
+* Use `Black Code Style <https://black.readthedocs.io>`_ for oemof.tools
+* Change default logging level for file logging from DEBUG to WARNING
+
 0.4.1 (2021-02-21)
 ------------------
 
