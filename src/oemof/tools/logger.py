@@ -56,7 +56,7 @@ def define_logging(
     screen_level : int
         Level of logging to stdout. Default: 20 (logging.INFO)
     file_level : int
-        Level of logging to file. Default: 10 (logging.DEBUG)
+        Level of logging to file. Default: 30 (logging.WARNING)
     log_path : boolean
         If True the used file path is logged while initialising the logger.
     timed_rotating : dict
