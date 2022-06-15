@@ -20,7 +20,7 @@ project = "oemof-tools"
 year = "2014-2020"
 author = "oemof-developer-group"
 copyright = "{0}, {1}".format(year, author)
-version = release = "0.4.2"
+version = release = "0.4.3dev0"
 
 pygments_style = "trac"
 templates_path = ["."]
