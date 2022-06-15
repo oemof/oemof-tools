@@ -11,8 +11,8 @@ SPDX-License-Identifier: MIT
 
 import os
 import sys
-from logging import DEBUG
 from logging import INFO
+from logging import WARNING
 from logging import Formatter
 from logging import StreamHandler
 from logging import debug
@@ -21,10 +21,18 @@ from logging import handlers
 from logging import info
 
 
-def define_logging(logpath=None, logfile='oemof.log', file_format=None,
-                   screen_format=None, file_datefmt=None, screen_datefmt=None,
-                   screen_level=INFO, file_level=DEBUG, log_path=True,
-                   timed_rotating=None):
+def define_logging(
+    logpath=None,
+    logfile="oemof.log",
+    file_format=None,
+    screen_format=None,
+    file_datefmt=None,
+    screen_datefmt=None,
+    screen_level=INFO,
+    file_level=WARNING,
+    log_path=True,
+    timed_rotating=None,
+):
 
     r"""Initialise customisable logger.
 
@@ -84,19 +92,24 @@ def define_logging(logpath=None, logfile='oemof.log', file_format=None,
     """
 
     if logpath is None:
-        logpath = extend_basic_path('log_files')
+        logpath = extend_basic_path("log_files")
+
+    # Fetch minimal logging level
+    if screen_level > file_level:
+        min_level = file_level
+    else:
+        min_level = screen_level
 
     file = os.path.join(logpath, logfile)
 
-    log = getLogger('')
+    log = getLogger("")
 
     # Remove existing handlers to avoid interference.
     log.handlers = []
-    log.setLevel(DEBUG)
+    log.setLevel(min_level)
 
     if file_format is None:
-        file_format = (
-            "%(asctime)s - %(levelname)s - %(module)s - %(message)s")
+        file_format = "%(asctime)s - %(levelname)s - %(module)s - %(message)s"
     file_formatter = Formatter(file_format, file_datefmt)
 
     if screen_format is None:
@@ -112,9 +125,7 @@ def define_logging(logpath=None, logfile='oemof.log', file_format=None,
     ch.setLevel(screen_level)
     log.addHandler(ch)
 
-    timed_rotating_p = {
-        'when': 'midnight',
-        'backupCount': 10}
+    timed_rotating_p = {"when": "midnight", "backupCount": 10}
 
     if timed_rotating is not None:
         timed_rotating_p.update(timed_rotating)
@@ -133,7 +144,7 @@ def define_logging(logpath=None, logfile='oemof.log', file_format=None,
 
 def extend_basic_path(subfolder):
     """Returns a path based on the basic oemof path and creates it if
-     necessary. The subfolder is the name of the path extension.
+    necessary. The subfolder is the name of the path extension.
     """
     extended_path = os.path.join(get_basic_path(), subfolder)
     if not os.path.isdir(extended_path):
@@ -145,7 +156,7 @@ def get_basic_path():
     """Returns the basic oemof path and creates it if necessary.
     The basic path is the '.oemof' folder in the $HOME directory.
     """
-    basicpath = os.path.join(os.path.expanduser('~'), '.oemof')
+    basicpath = os.path.join(os.path.expanduser("~"), ".oemof")
     if not os.path.isdir(basicpath):
         os.mkdir(basicpath)
     return basicpath
