@@ -33,7 +33,6 @@ def define_logging(
     log_path=True,
     timed_rotating=None,
 ):
-
     r"""Initialise customisable logger.
 
     Parameters
