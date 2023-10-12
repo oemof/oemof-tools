@@ -1,4 +1,4 @@
-__version__ = "0.4.3dev0"
+__version__ = "0.4.3"
 
 from . import debugging
 from . import economics
