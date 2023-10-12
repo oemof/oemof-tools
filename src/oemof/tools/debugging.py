@@ -32,6 +32,7 @@ class SuspiciousUsageWarning(UserWarning):
     >>> warnings.filterwarnings("ignore", category=SuspiciousUsageWarning)
     """
 
+
 class ExperimentalFeatureWarning(UserWarning):
     """
     Warn the user about use of experimental features.
@@ -40,4 +41,3 @@ class ExperimentalFeatureWarning(UserWarning):
     Sometimes, functionality is added to existing code. We use this warning
     to warn users in these cases.
     """
-
