@@ -29,7 +29,7 @@ long_description = "%s\n%s" % (
 
 setup(
     name="oemof.tools",
-    version="0.4.3",
+    version="0.4.4.dev0",
     license="MIT",
     description="Tiny tools of the oemof project.",
     long_description_content_type="text/x-rst",
