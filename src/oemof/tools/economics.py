@@ -36,8 +36,7 @@ def annuity(capex, n, wacc, u=None, cost_decrease=0):
     Parameters
     ----------
     capex : float
-        Capital expenditure for first investment. Net Present Value (NPV) or
-        Net Present Cost (NPC) of investment
+        Capital expenditure for first investment.
     n : int
         Horizon of the analysis, or number of years the annuity wants to be
         obtained for (n>=1)
