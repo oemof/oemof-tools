@@ -76,7 +76,7 @@ Package
 
 .. end-badges
 
-Tiny tools used for the development of oemof packages.
+Tiny tools used mainly for the development of oemof packages.
 
 * Free software: MIT license
 
